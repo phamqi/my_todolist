@@ -1,0 +1,156 @@
+:root {
+  --bg-color: #f4f5fa;
+  --txt-color: #333;
+  --txt-color-blur: #999;
+  --blue-color: #5979e7;
+  --bg--color--item: #fff;
+  --white-color: rgb(241, 231, 231);
+  --edit-color: #539ec2;
+  --delete-color: #d77b76;
+  --done-color: #0bd03a;
+}
+* {
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+}
+html {
+  font-size: 16px;
+}
+/* To do css */
+.todo {
+  &__wrapper {
+    width: 30rem;
+    background-color: var(--bg-color);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.4rem;
+    box-shadow: 1px 1px 5px var(--txt-color-blur);
+  }
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    margin-bottom: 1rem;
+  }
+  &__title {
+    color: var(--txt-color);
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  &__btn--add {
+    background-color: var(--blue-color);
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border: none;
+    color: var(--white-color);
+    & > svg {
+      width: 20px;
+      height: 20px;
+      margin: 3px;
+    }
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg--color--item);
+    box-shadow: 1px 1px 2px var(--txt-color-blur);
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 0.4rem;
+    & > * {
+      user-select: none;
+    }
+  }
+  &__create__at {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__icon {
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__time {
+      color: var(--txt-color-blur);
+      font-size: 0.9rem;
+      height: fit-content;
+    }
+  }
+  &__details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__txt {
+      flex: 1;
+      font-size: 1.1rem;
+      color: var(--txt-color);
+      line-height: 1.3;
+      text-transform: capitalize;
+      text-align: left;
+      border: none;
+      padding: 5px 10px;
+      &:read-only:focus {
+        outline: none;
+      }
+      &:read-only {
+        color: var(--txt-color-blur);
+        cursor: default;
+      }
+    }
+    &__action {
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__btn {
+        padding: 0 0.3rem;
+        height: 30px;
+        width: 30px;
+        background-color: white;
+        border: none;
+        &--edit {
+          color: var(--edit-color);
+        }
+        &--delete {
+          color: var(--delete-color);
+        }
+        &--save {
+          color: var(--done-color);
+        }
+      }
+    }
+  }
+}
+.list {
+  &__content {
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    & > div {
+      margin: 1rem;
+    }
+  }
+}
