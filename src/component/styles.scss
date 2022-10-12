@@ -379,6 +379,9 @@ html {
   html {
     font-size: 12px;
   }
+  .list__popup {
+    width: 100vw;
+  }
 }
 @media screen and (max-width: 576px) {
   .container {
