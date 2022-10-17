@@ -26,7 +26,7 @@ class EmptyTodo extends Component {
         <button
           id="btn__ping"
           className=" todo__item__btn__ping"
-          onClick={() => this.addClick()}
+          onClick={this.addClick}
         >
           {icon.add}
           <span>{this.props.children}</span>

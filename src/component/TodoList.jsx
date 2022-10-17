@@ -23,13 +23,6 @@ class TodoList extends Component {
       },
       emptyTodo: true,
     };
-    String.prototype.hashCode = function (key) {
-      var hash = "";
-      if (this.length === 0) {
-        return hash;
-      }
-      return this + key;
-    };
   }
 
   saveChange = (childData) => {

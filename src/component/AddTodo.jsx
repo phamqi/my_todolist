@@ -43,15 +43,15 @@ class AddTodo extends Component {
               className="list__popup__content__txt__input"
               type="text"
               value={this.state.valueInput}
-              onChange={(e) => this.onChange(e)}
-              onKeyPress={(e) => this.onKeyPress(e)}
+              onChange={this.onChange}
+              onKeyPress={this.onKeyPress}
             />
           </div>
         </div>
         <div className="list__popup__action">
           <button
             className="list__popup__action__btn list__popup__action__btn__save"
-            onClick={() => this.handleClick()}
+            onClick={this.handleClick}
           >
             Create
           </button>
